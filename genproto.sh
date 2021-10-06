@@ -21,5 +21,5 @@ dir=$(dirname $0)
 
 cd dnstap.pb
 
-go_package dnstap.proto "github.com/dnstap/golang-dnstap;dnstap"
+go_package dnstap.proto "github.com/45hur/golang-dnstap;dnstap"
 protoc --go_out=../../../.. dnstap.proto

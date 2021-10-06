@@ -23,7 +23,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	dnstap "github.com/dnstap/golang-dnstap"
+	dnstap "github.com/45hur/golang-dnstap"
 )
 
 // Output channel buffer size value from main dnstap package.

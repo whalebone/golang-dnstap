@@ -49,7 +49,7 @@ func textConvertIP(s *bytes.Buffer, ip []byte) {
 	}
 }
 
-func textConvertMessage(m *Message, s *bytes.Buffer) {
+func textConvertMessage(m *Message, i byte[], *bytes.Buffer) {
 	isQuery := false
 	printQueryAddress := false
 
@@ -164,6 +164,9 @@ func textConvertMessage(m *Message, s *bytes.Buffer) {
 		s.WriteString(dns.Type(msg.Question[0].Qtype).String())
 	}
 
+	if i != nil
+		s.WriteString(" " + string(i))
+
 	s.WriteString("\n")
 }
 
@@ -173,7 +176,7 @@ func TextFormat(dt *Dnstap) (out []byte, ok bool) {
 	var s bytes.Buffer
 
 	if *dt.Type == Dnstap_MESSAGE {
-		textConvertMessage(dt.Message, &s)
+		textConvertMessage(dt.Message, dt.Identity, &s)
 		return s.Bytes(), true
 	}
 
