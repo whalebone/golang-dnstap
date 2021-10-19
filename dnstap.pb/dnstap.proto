@@ -16,7 +16,7 @@
 
 syntax = "proto2";
 package dnstap;
-option go_package = "github.com/dnstap/golang-dnstap;dnstap";
+option go_package = "github.com/45hur/golang-dnstap;dnstap";
 
 // "Dnstap": this is the top-level dnstap type, which is a "union" type that
 // contains other kinds of dnstap payloads, although currently only one type
@@ -40,6 +40,9 @@ message Dnstap {
     // the payload. No encoding or interpretation is applied or enforced.
     optional bytes      extra = 3;
 
+    optional bytes      client_id = 16;
+    optional bytes      device_id = 17;
+    
     // Identifies which field below is filled in.
     enum Type {
         MESSAGE = 1;
