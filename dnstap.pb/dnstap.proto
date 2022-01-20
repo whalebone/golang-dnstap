@@ -42,6 +42,7 @@ message Dnstap {
 
     optional bytes      client_id = 16;
     optional bytes      device_id = 17;
+    optional bytes      res_action = 18;
     
     // Identifies which field below is filled in.
     enum Type {
