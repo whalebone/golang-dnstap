@@ -89,16 +89,16 @@ func (o *TextOutput) RunOutputLoop() {
 	for frame := range o.outputChannel {
 		if err := proto.Unmarshal(frame, dt); err != nil {
 			o.log.Printf("dnstap.TextOutput: proto.Unmarshal() failed: %s, returning", err)
-			break
+			panic(frame)
 		}
 		buf, ok := o.format(dt)
 		if !ok {
 			o.log.Printf("dnstap.TextOutput: text format function failed, returning")
-			break
+			panic(dt)
 		}
 		if _, err := o.writer.Write(buf); err != nil {
 			o.log.Printf("dnstap.TextOutput: write error: %v, returning", err)
-			break
+			panic(err)
 		}
 		o.writer.Flush()
 	}
