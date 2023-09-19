@@ -47,6 +47,10 @@ message Dnstap {
   optional bytes client_id = 19;
   optional bytes device_id = 20;
   optional bytes region = 21;
+  optional bytes subscription_id = 22;
+  optional bytes group_id = 23;
+  optional bytes segment_id = 24;
+  optional bytes brand_id = 25;
 
   // Identifies which field below is filled in.
   enum Type {
