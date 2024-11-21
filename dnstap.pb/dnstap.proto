@@ -5,19 +5,11 @@
 
 // Written in 2013-2014 by Farsight Security, Inc.
 //
-// To the extent possible under law, the author(s) have dedicated all
-// copyright and related and neighboring rights to this file to the public
-// domain worldwide. This file is distributed without any warranty.
-//
-// You should have received a copy of the CC0 Public Domain Dedication along
-// with this file. If not, see:
-//
-// <http://creativecommons.org/publicdomain/zero/1.0/>.
+// SPDX-License-Identifier: CC0-1.0
 
 syntax = "proto2";
 package dnstap;
-
-option go_package = "github.com/45hur/golang-dnstap;dnstap";
+option go_package = "github.com/whalebone/golang-dnstap;dnstap";
 
 // "Dnstap": this is the top-level dnstap type, which is a "union" type that
 // contains other kinds of dnstap payloads, although currently only one type
@@ -51,6 +43,7 @@ message Dnstap {
   optional bytes group_id = 23;
   optional bytes segment_id = 24;
   optional bytes brand_id = 25;
+  optional bytes tag = 26;
 
   // Identifies which field below is filled in.
   enum Type {

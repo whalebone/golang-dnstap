@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 go_package() {
 	local file pkg line script
@@ -21,5 +21,9 @@ dir=$(dirname $0)
 
 cd dnstap.pb
 
-go_package dnstap.proto "github.com/45hur/golang-dnstap;dnstap"
-protoc --go_out=../../../.. dnstap.proto
+package_name="github.com/whalebone/golang-dnstap"
+
+go_package dnstap.proto "${package_name};dnstap"
+protoc --go_out ./ dnstap.proto
+cp ./${package_name}/dnstap.pb.go ..
+rm -rf github.com/
