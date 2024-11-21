@@ -1,4 +1,4 @@
-module github.com/45hur/golang-dnstap
+module github.com/whalebone/golang-dnstap
 
 go 1.16
 
