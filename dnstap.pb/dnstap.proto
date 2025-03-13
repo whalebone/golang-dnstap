@@ -45,6 +45,7 @@ message Dnstap {
   optional bytes brand_id = 25;
   optional bytes tag = 26;
   optional bool ratelimited = 27;
+  optional int32 ede_code = 28;
 
   // Identifies which field below is filled in.
   enum Type {
