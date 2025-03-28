@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - The `dnstap` message is extended with `ede_code` representing EDE code returned in the DNS response. (https://whaleboneio.atlassian.net/browse/PD-6144 and https://whaleboneio.atlassian.net/browse/PD-4421)
+- The `dnstap` message is extended with `blocked` flag and `response_time`. (https://whaleboneio.atlassian.net/browse/PD-6416 and https://whaleboneio.atlassian.net/browse/PD-6039)
 
 ## [v0.2.0-originv0.4.0] - 2025-02-26
 ### Added
