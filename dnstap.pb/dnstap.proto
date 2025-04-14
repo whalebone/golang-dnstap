@@ -46,8 +46,7 @@ message Dnstap {
   optional bytes tag = 26;
   optional bool ratelimited = 27;
   optional sint32 ede_code = 28;
-  optional bool blocked = 29;
-  optional uint64 response_time = 30;
+  optional uint64 response_time = 29;
 
   // Identifies which field below is filled in.
   enum Type {
