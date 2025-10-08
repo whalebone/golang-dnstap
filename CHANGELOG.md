@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [v0.3.0-originv0.4.0] - 2025-10-08
 ### Added
 - The `dnstap` message is extended with `ede_code` representing EDE code returned in the DNS response. (https://whaleboneio.atlassian.net/browse/PD-6144 and https://whaleboneio.atlassian.net/browse/PD-4421)
 - The `dnstap` message is extended with `response_time`. (https://whaleboneio.atlassian.net/browse/PD-6416 and https://whaleboneio.atlassian.net/browse/PD-6039)
